@@ -15,7 +15,7 @@ class MyAirtel extends StatelessWidget {
           title: Text('DeviceSimulator Demo'),
         ),
         body: Center(
-          child: Text('Hello multiple resolutions!'),
+          child: Text('My Airtel RDC Clone'),
         ),
       ),
     );

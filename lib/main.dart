@@ -12,7 +12,12 @@ class MyAirtel extends StatelessWidget {
       ),
       home: Scaffold(
         appBar: AppBar(
-          title: Text('DeviceSimulator Demo'),
+          leading: Icon(Icons.menu),
+          title: Text('Airtel'),
+          actions: [
+            Icon(Icons.notifications)
+          ],
+
         ),
         body: Center(
           child: Text('My Airtel RDC Clone'),

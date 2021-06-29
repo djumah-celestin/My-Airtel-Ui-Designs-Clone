@@ -6,18 +6,16 @@ class MyAirtel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'My Airtel',
       theme: ThemeData(
         primaryColor: Colors.red,
       ),
       home: Scaffold(
+        drawer: Drawer(),
         appBar: AppBar(
-          leading: Icon(Icons.menu),
           title: Text('Airtel'),
-          actions: [
-            Icon(Icons.notifications)
-          ],
-
+          actions: [Icon(Icons.notifications)],
         ),
         body: Center(
           child: Text('My Airtel RDC Clone'),

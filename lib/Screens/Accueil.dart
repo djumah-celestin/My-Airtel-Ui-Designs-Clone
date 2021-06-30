@@ -12,161 +12,196 @@ class _AccueilState extends State<Accueil> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
-        child: Container(
-          height: MediaQuery.of(context).size.height,
-          child: Column(
-            children: [
-              CarouselSlider(
-                options: CarouselOptions(
-                  height: MediaQuery.of(context).size.height / 4,
-                  viewportFraction: 1.0,
-                  initialPage: 0,
-                  enableInfiniteScroll: true,
-                  reverse: false,
-                  autoPlay: true,
-                  autoPlayInterval: Duration(seconds: 3),
-                  autoPlayAnimationDuration: Duration(milliseconds: 800),
-                  autoPlayCurve: Curves.ease,
-                  enlargeCenterPage: true,
-                  // onPageChanged: callbackFunction,
-                  scrollDirection: Axis.horizontal,
-                ),
-                items: [
-                  'assets/images/maxresdefault.jpg',
-                  'assets/images/My-Airtel-App.jpg',
-                ].map((i) {
-                  return Builder(
-                    builder: (BuildContext context) {
-                      return Padding(
-                        padding: EdgeInsets.only(
-                          top: ScreenUtil().setHeight(7.0),
-                          bottom: ScreenUtil().setHeight(7.0),
-                          left: ScreenUtil().setHeight(10.0),
-                          right: ScreenUtil().setHeight(10.0),
-                        ),
-                        child: Container(
-                          width: double.infinity,
-                          decoration: BoxDecoration(
-                              image: DecorationImage(
-                                image: AssetImage(i),
-                                fit: BoxFit.fill,
-                              ),
-                              borderRadius: BorderRadius.only(
-                                  topLeft: Radius.zero,
-                                  topRight: Radius.zero,
-                                  bottomLeft: Radius.zero,
-                                  bottomRight: Radius.zero)),
-                        ),
-                      );
-                    },
-                  );
-                }).toList(),
+        child: Column(
+          children: [
+            CarouselSlider(
+              options: CarouselOptions(
+                height: MediaQuery.of(context).size.height / 4,
+                viewportFraction: 1.0,
+                initialPage: 0,
+                enableInfiniteScroll: true,
+                reverse: false,
+                autoPlay: true,
+                autoPlayInterval: Duration(seconds: 3),
+                autoPlayAnimationDuration: Duration(milliseconds: 800),
+                autoPlayCurve: Curves.ease,
+                enlargeCenterPage: true,
+                // onPageChanged: callbackFunction,
+                scrollDirection: Axis.horizontal,
               ),
-              Padding(
-                padding: EdgeInsets.only(
-                  left: ScreenUtil().setHeight(7.0),
-                  right: ScreenUtil().setHeight(7.0),
-                ),
-                child: Card(
-                  child: Container(
-                    child: Padding(
+              items: [
+                'assets/images/maxresdefault.jpg',
+                'assets/images/My-Airtel-App.jpg',
+              ].map((i) {
+                return Builder(
+                  builder: (BuildContext context) {
+                    return Padding(
                       padding: EdgeInsets.only(
-                          top: ScreenUtil().setHeight(7.0),
-                          right: ScreenUtil().setHeight(7.0),
-                          left: ScreenUtil().setHeight(7.0)),
-                      child: Column(
-                        children: [
-                          Row(
-                            crossAxisAlignment: CrossAxisAlignment.start,
+                        top: ScreenUtil().setHeight(7.0),
+                        bottom: ScreenUtil().setHeight(7.0),
+                        left: ScreenUtil().setHeight(10.0),
+                        right: ScreenUtil().setHeight(10.0),
+                      ),
+                      child: Container(
+                        width: double.infinity,
+                        decoration: BoxDecoration(
+                            image: DecorationImage(
+                              image: AssetImage(i),
+                              fit: BoxFit.fill,
+                            ),
+                            borderRadius: BorderRadius.only(
+                                topLeft: Radius.zero,
+                                topRight: Radius.zero,
+                                bottomLeft: Radius.zero,
+                                bottomRight: Radius.zero)),
+                      ),
+                    );
+                  },
+                );
+              }).toList(),
+            ),
+            Padding(
+              padding: EdgeInsets.only(
+                left: ScreenUtil().setHeight(7.0),
+                right: ScreenUtil().setHeight(7.0),
+              ),
+              child: Card(
+                child: Container(
+                  child: Padding(
+                    padding: EdgeInsets.only(
+                        top: ScreenUtil().setHeight(7.0),
+                        right: ScreenUtil().setHeight(7.0),
+                        left: ScreenUtil().setHeight(7.0)),
+                    child: Column(
+                      children: [
+                        Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            // SizedBox(
+                            //   width: ScreenUtil().setHeight(15.0),
+                            // ),
+                            CircleAvatar(
+                              backgroundColor: Colors.deepPurple,
+                              child: Text(
+                                "D",
+                                style: TextStyle(color: Colors.white),
+                              ),
+                            ),
+                            SizedBox(
+                              width: ScreenUtil().setHeight(15.0),
+                            ),
+                            Expanded(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text("djumah risasi célestin",
+                                      style: TextStyle(
+                                          fontFamily: "DayRow",
+                                          fontSize:
+                                              ScreenUtil().setHeight(10.0),
+                                          color: Colors.black)),
+                                  Text("Prepayé - 974818977",
+                                      style: TextStyle(
+                                          fontFamily: "DayRow",
+                                          fontSize:
+                                              ScreenUtil().setHeight(10.0),
+                                          color: Colors.black)),
+                                  Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Text("Ajouter un compte",
+                                          style: TextStyle(
+                                              fontFamily: "DayRow",
+                                              fontSize:
+                                                  ScreenUtil().setHeight(10.0),
+                                              color: Colors.blue)),
+                                      Text("GERER UN COMPTE",
+                                          style: TextStyle(
+                                              fontFamily: "DayRow",
+                                              fontSize:
+                                                  ScreenUtil().setHeight(10.0),
+                                              color: Colors.blue)),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            )
+                          ],
+                        ),
+                        Divider(
+                          thickness: 0.5,
+                          color: Colors.grey,
+                        ),
+                        Container(
+                          padding: EdgeInsets.only(
+                              bottom: ScreenUtil().setHeight(10.0)),
+                          height: MediaQuery.of(context).size.height / 9,
+                          child: Row(
+                            // mainAxisSize: MainAxisSize.min,
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              // SizedBox(
-                              //   width: ScreenUtil().setHeight(15.0),
-                              // ),
-                              CircleAvatar(
-                                backgroundColor: Colors.deepPurple,
-                                child: Text(
-                                  "D",
-                                  style: TextStyle(color: Colors.white),
-                                ),
+                              soldeInformations("11,40", "UNI", "Solde"),
+                              VerticalDivider(
+                                thickness: 0.5,
+                                color: Colors.grey,
                               ),
-                              SizedBox(
-                                width: ScreenUtil().setHeight(15.0),
+                              soldeInformations("0", "Mins", "Solde Appel"),
+                              VerticalDivider(
+                                thickness: 0.5,
+                                color: Colors.grey,
                               ),
-                              Expanded(
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text("djumah risasi célestin",
-                                        style: TextStyle(
-                                            fontFamily: "DayRow",
-                                            fontSize:
-                                                ScreenUtil().setHeight(10.0),
-                                            color: Colors.black)),
-                                    Text("Prepayé - 974818977",
-                                        style: TextStyle(
-                                            fontFamily: "DayRow",
-                                            fontSize:
-                                                ScreenUtil().setHeight(10.0),
-                                            color: Colors.black)),
-                                    Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceBetween,
-                                      children: [
-                                        Text("Ajouter un compte",
-                                            style: TextStyle(
-                                                fontFamily: "DayRow",
-                                                fontSize: ScreenUtil()
-                                                    .setHeight(10.0),
-                                                color: Colors.blue)),
-                                        Text("GERER UN COMPTE",
-                                            style: TextStyle(
-                                                fontFamily: "DayRow",
-                                                fontSize: ScreenUtil()
-                                                    .setHeight(10.0),
-                                                color: Colors.blue)),
-                                      ],
-                                    ),
-                                  ],
-                                ),
-                              )
+                              soldeInformations("0", "Ko", "Solde Internet"),
                             ],
                           ),
-                          Divider(
-                            thickness: 0.5,
-                            color: Colors.grey,
-                          ),
-                          Container(
-                            padding: EdgeInsets.only(bottom: ScreenUtil().setHeight(7.0)),
-                            height: MediaQuery.of(context).size.height / 10,
-                            child: Row(
-                              // mainAxisSize: MainAxisSize.min,
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                soldeInformations("11,40", "UNI", "Solde"),
-                                VerticalDivider(
-                                  thickness: 0.5,
-                                  color: Colors.grey,
-                                ),
-                                soldeInformations("0", "Mins", "Solde Appel"),
-                                VerticalDivider(
-                                  thickness: 0.5,
-                                  color: Colors.grey,
-                                ),
-                                soldeInformations("0", "Ko", "Solde Internet"),
-                              ],
-                            ),
-                          ),
-                          Row(children: [
-                            
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Container(
+                                height: MediaQuery.of(context).size.height / 20,
+                                width: MediaQuery.of(context).size.width / 2,
+                                decoration: BoxDecoration(
+                                    color: Colors.blueGrey[900],
+                                    borderRadius: BorderRadius.only(
+                                        topLeft: Radius.circular(
+                                            ScreenUtil().setHeight(5.0)),
+                                        bottomLeft: Radius.circular(
+                                            ScreenUtil().setHeight(5.0)),
+                                        topRight: Radius.circular(
+                                            ScreenUtil().setHeight(5.0)),
+                                        bottomRight: Radius.circular(
+                                            ScreenUtil().setHeight(5.0)))),
+                                child: Center(
+                                  child: Text("CPT - Crédit de communication",
+                                      style: TextStyle(
+                                          fontSize: ScreenUtil().setHeight(10),
+                                          color: Colors.white)),
+                                )),
+                            Text("Voir tous les soldes",
+                                style: TextStyle(
+                                    fontFamily: "DayRow",
+                                    fontSize: ScreenUtil().setHeight(10.0),
+                                    color: Colors.blue)),
                           ],
-                        ],
-                      ),
+                        ),
+                        Divider(
+                          thickness: 0.5,
+                          color: Colors.grey,
+                        ),
+                        Container(
+                          height: MediaQuery.of(context).size.height / 3,
+                          child: Column(
+                            children: [],
+                          ),
+                        )
+                      ],
                     ),
                   ),
                 ),
-              )
-            ],
-          ),
+              ),
+            )
+          ],
         ),
       ),
     );

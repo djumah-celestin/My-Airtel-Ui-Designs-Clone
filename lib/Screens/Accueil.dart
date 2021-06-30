@@ -72,15 +72,16 @@ class _AccueilState extends State<Accueil> {
                     child: Padding(
                       padding: EdgeInsets.only(
                           top: ScreenUtil().setHeight(7.0),
-                          right: ScreenUtil().setHeight(7.0)),
+                          right: ScreenUtil().setHeight(7.0),
+                          left: ScreenUtil().setHeight(7.0)),
                       child: Column(
                         children: [
                           Row(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              SizedBox(
-                                width: ScreenUtil().setHeight(15.0),
-                              ),
+                              // SizedBox(
+                              //   width: ScreenUtil().setHeight(15.0),
+                              // ),
                               CircleAvatar(
                                 backgroundColor: Colors.deepPurple,
                                 child: Text(
@@ -130,6 +131,45 @@ class _AccueilState extends State<Accueil> {
                               )
                             ],
                           ),
+                          Divider(
+                            thickness: 0.5,
+                            color: Colors.grey,
+                          ),
+                          Container(
+                            height: MediaQuery.of(context).size.height/10,
+                            child: Row(
+                              children: [
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Text("11,40",
+                                        style: TextStyle(
+                                            fontFamily: "Aclonica",
+                                            fontWeight: FontWeight.bold,
+                                            fontSize:
+                                                ScreenUtil().setHeight(15.0),
+                                            color: Colors.black)),
+                                    Text("UNI",
+                                        style: TextStyle(
+                                            fontFamily: "Aclonica",
+                                            fontWeight: FontWeight.bold,
+                                            fontSize:
+                                                ScreenUtil().setHeight(13.0),
+                                            color: Colors.red)),
+                                    Text("Solde",
+                                        style: TextStyle(
+                                            fontFamily: "DayRow",
+                                            fontWeight: FontWeight.bold,
+                                            fontSize:
+                                                ScreenUtil().setHeight(13.0),
+                                            color: Colors.grey)),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          )
                         ],
                       ),
                     ),

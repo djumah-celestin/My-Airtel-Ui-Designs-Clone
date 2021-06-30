@@ -20,6 +20,7 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_screenutil: ^5.0.0+2
+  carousel_slider: ^4.0.0
 
 
 flutter:

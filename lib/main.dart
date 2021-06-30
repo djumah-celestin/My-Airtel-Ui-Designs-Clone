@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:myairtel/Screens/Accueil.dart';
 
 void main() => runApp(MyAirtel());
 
@@ -448,7 +449,7 @@ class MyAirtel extends StatelessWidget {
               body: TabBarView(
                 children: [
                   Center(
-                    child: Text("Accueil"),
+                    child: Accueil(),
                   ),
                   Center(
                     child: Text("Airtel Money"),

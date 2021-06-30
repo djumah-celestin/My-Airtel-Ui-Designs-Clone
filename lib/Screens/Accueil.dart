@@ -190,9 +190,81 @@ class _AccueilState extends State<Accueil> {
                           color: Colors.grey,
                         ),
                         Container(
-                          height: MediaQuery.of(context).size.height / 3,
+                          padding: EdgeInsets.only(
+                              top: ScreenUtil().setHeight(10.0)),
                           child: Column(
-                            children: [],
+                            children: [
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text("Nos suggestions",
+                                      style: TextStyle(
+                                          fontFamily: "DayRow",
+                                          fontWeight: FontWeight.bold,
+                                          fontSize:
+                                              ScreenUtil().setHeight(15.0),
+                                          color: Colors.black)),
+                                  Text("TOUTES LES OFFRES",
+                                      style: TextStyle(
+                                          fontFamily: "DayRow",
+                                          fontSize:
+                                              ScreenUtil().setHeight(10.0),
+                                          color: Colors.blue)),
+                                ],
+                              ),
+                              SizedBox(
+                                height: ScreenUtil().setHeight(15.0),
+                              ),
+                              offresInformations("8 minutes + 25 minutes",
+                                  "Validité 1 Jr", "50"),
+                              SizedBox(
+                                height: ScreenUtil().setHeight(10.0),
+                              ),
+                              offresInformations(
+                                  "1 GB", "Validité 1 Jr", "100"),
+                              SizedBox(
+                                height: ScreenUtil().setHeight(10.0),
+                              ),
+                              offresInformations(
+                                  "10 GB", "Validité 30 Jrs", "1 000"),
+                              SizedBox(
+                                height: ScreenUtil().setHeight(15.0),
+                              ),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                children: [
+                                  Container(
+                                      height:
+                                          MediaQuery.of(context).size.height /
+                                              20,
+                                      width:
+                                          MediaQuery.of(context).size.width / 3,
+                                      decoration: BoxDecoration(
+                                          color: Colors.blueGrey[900],
+                                          borderRadius: BorderRadius.only(
+                                              topLeft: Radius.circular(
+                                                  ScreenUtil().setHeight(5.0)),
+                                              bottomLeft: Radius.circular(
+                                                  ScreenUtil().setHeight(5.0)),
+                                              topRight: Radius.circular(
+                                                  ScreenUtil().setHeight(5.0)),
+                                              bottomRight: Radius.circular(
+                                                  ScreenUtil()
+                                                      .setHeight(5.0)))),
+                                      child: Center(
+                                        child: Text("AUTO-RECHARGE",
+                                            style: TextStyle(
+                                                fontSize:
+                                                    ScreenUtil().setHeight(10),
+                                                color: Colors.white)),
+                                      )),
+                                ],
+                              ),
+                              SizedBox(
+                                height: ScreenUtil().setHeight(15.0),
+                              ),
+                            ],
                           ),
                         )
                       ],
@@ -204,6 +276,65 @@ class _AccueilState extends State<Accueil> {
           ],
         ),
       ),
+    );
+  }
+
+  Row offresInformations(String offre, String validite, String valeur) {
+    return Row(
+      children: [
+        CircleAvatar(
+          backgroundColor: Colors.purple[300],
+          child: Icon(
+            Icons.where_to_vote_rounded,
+            color: Colors.white,
+          ),
+        ),
+        SizedBox(
+          width: ScreenUtil().setHeight(15.0),
+        ),
+        Expanded(
+            child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(offre,
+                style: TextStyle(
+                    fontFamily: "DayRow",
+                    fontWeight: FontWeight.bold,
+                    fontSize: ScreenUtil().setHeight(12.0),
+                    color: Colors.black)),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(validite,
+                    style: TextStyle(
+                        fontFamily: "DayRow",
+                        fontWeight: FontWeight.bold,
+                        fontSize: ScreenUtil().setHeight(9.0),
+                        color: Colors.black)),
+                Row(
+                  children: [
+                    Text(valeur,
+                        style: TextStyle(
+                            fontFamily: "DayRow",
+                            fontWeight: FontWeight.bold,
+                            fontSize: ScreenUtil().setHeight(9.0),
+                            color: Colors.black)),
+                    SizedBox(
+                      width: ScreenUtil().setWidth(5.0),
+                    ),
+                    Text("UNI",
+                        style: TextStyle(
+                            fontFamily: "DayRow",
+                            fontWeight: FontWeight.bold,
+                            fontSize: ScreenUtil().setHeight(9.0),
+                            color: Colors.red)),
+                  ],
+                )
+              ],
+            ),
+          ],
+        ))
+      ],
     );
   }
 

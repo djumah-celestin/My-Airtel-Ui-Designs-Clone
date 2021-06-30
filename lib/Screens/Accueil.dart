@@ -70,8 +70,9 @@ class _AccueilState extends State<Accueil> {
                 child: Card(
                   child: Container(
                     child: Padding(
-                      padding:
-                          EdgeInsets.only(top: ScreenUtil().setHeight(7.0)),
+                      padding: EdgeInsets.only(
+                          top: ScreenUtil().setHeight(7.0),
+                          right: ScreenUtil().setHeight(7.0)),
                       child: Column(
                         children: [
                           Row(
@@ -90,40 +91,42 @@ class _AccueilState extends State<Accueil> {
                               SizedBox(
                                 width: ScreenUtil().setHeight(15.0),
                               ),
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text("djumah risasi célestin",
-                                      style: TextStyle(
-                                          fontFamily: "DayRow",
-                                          fontSize:
-                                              ScreenUtil().setHeight(10.0),
-                                          color: Colors.black)),
-                                  Text("Prepayé - 974818977",
-                                      style: TextStyle(
-                                          fontFamily: "DayRow",
-                                          fontSize:
-                                              ScreenUtil().setHeight(10.0),
-                                          color: Colors.black)),
-                                  Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Text("Ajouter un compte",
-                                          style: TextStyle(
-                                              fontFamily: "DayRow",
-                                              fontSize:
-                                                  ScreenUtil().setHeight(10.0),
-                                              color: Colors.blue)),
-                                      Text("GERER UN COMPTE",
-                                          style: TextStyle(
-                                              fontFamily: "DayRow",
-                                              fontSize:
-                                                  ScreenUtil().setHeight(10.0),
-                                              color: Colors.blue)),
-                                    ],
-                                  ),
-                                ],
+                              Expanded(
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text("djumah risasi célestin",
+                                        style: TextStyle(
+                                            fontFamily: "DayRow",
+                                            fontSize:
+                                                ScreenUtil().setHeight(10.0),
+                                            color: Colors.black)),
+                                    Text("Prepayé - 974818977",
+                                        style: TextStyle(
+                                            fontFamily: "DayRow",
+                                            fontSize:
+                                                ScreenUtil().setHeight(10.0),
+                                            color: Colors.black)),
+                                    Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        Text("Ajouter un compte",
+                                            style: TextStyle(
+                                                fontFamily: "DayRow",
+                                                fontSize: ScreenUtil()
+                                                    .setHeight(10.0),
+                                                color: Colors.blue)),
+                                        Text("GERER UN COMPTE",
+                                            style: TextStyle(
+                                                fontFamily: "DayRow",
+                                                fontSize: ScreenUtil()
+                                                    .setHeight(10.0),
+                                                color: Colors.blue)),
+                                      ],
+                                    ),
+                                  ],
+                                ),
                               )
                             ],
                           ),

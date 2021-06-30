@@ -136,40 +136,29 @@ class _AccueilState extends State<Accueil> {
                             color: Colors.grey,
                           ),
                           Container(
-                            height: MediaQuery.of(context).size.height/10,
+                            padding: EdgeInsets.only(bottom: ScreenUtil().setHeight(7.0)),
+                            height: MediaQuery.of(context).size.height / 10,
                             child: Row(
+                              // mainAxisSize: MainAxisSize.min,
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    Text("11,40",
-                                        style: TextStyle(
-                                            fontFamily: "Aclonica",
-                                            fontWeight: FontWeight.bold,
-                                            fontSize:
-                                                ScreenUtil().setHeight(15.0),
-                                            color: Colors.black)),
-                                    Text("UNI",
-                                        style: TextStyle(
-                                            fontFamily: "Aclonica",
-                                            fontWeight: FontWeight.bold,
-                                            fontSize:
-                                                ScreenUtil().setHeight(13.0),
-                                            color: Colors.red)),
-                                    Text("Solde",
-                                        style: TextStyle(
-                                            fontFamily: "DayRow",
-                                            fontWeight: FontWeight.bold,
-                                            fontSize:
-                                                ScreenUtil().setHeight(13.0),
-                                            color: Colors.grey)),
-                                  ],
+                                soldeInformations("11,40", "UNI", "Solde"),
+                                VerticalDivider(
+                                  thickness: 0.5,
+                                  color: Colors.grey,
                                 ),
+                                soldeInformations("0", "Mins", "Solde Appel"),
+                                VerticalDivider(
+                                  thickness: 0.5,
+                                  color: Colors.grey,
+                                ),
+                                soldeInformations("0", "Ko", "Solde Internet"),
                               ],
                             ),
-                          )
+                          ),
+                          Row(children: [
+                            
+                          ],
                         ],
                       ),
                     ),
@@ -180,6 +169,33 @@ class _AccueilState extends State<Accueil> {
           ),
         ),
       ),
+    );
+  }
+
+  Column soldeInformations(String solde, String detail, String type) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Text(solde,
+            style: TextStyle(
+                fontFamily: "Aclonica",
+                fontWeight: FontWeight.bold,
+                fontSize: ScreenUtil().setHeight(15.0),
+                color: Colors.black)),
+        Text(detail,
+            style: TextStyle(
+                fontFamily: "Aclonica",
+                fontWeight: FontWeight.bold,
+                fontSize: ScreenUtil().setHeight(13.0),
+                color: Colors.red)),
+        Text(type,
+            style: TextStyle(
+                fontFamily: "DayRow",
+                fontWeight: FontWeight.bold,
+                fontSize: ScreenUtil().setHeight(13.0),
+                color: Colors.grey)),
+      ],
     );
   }
 }

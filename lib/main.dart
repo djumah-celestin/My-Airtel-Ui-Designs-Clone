@@ -27,12 +27,12 @@ class MyAirtel extends StatelessWidget {
                           gradient: LinearGradient(
                         begin: Alignment.topRight,
                         end: Alignment.bottomLeft,
-                        stops: [0.1, 0.4, 0.6, 0.9],
+                        // stops: [0.1, 0.4, 0.6, 0.9],
                         colors: [
                           Colors.red,
                           Colors.blue,
-                          Colors.yellow,
-                          Colors.teal,
+                          // Colors.yellow,
+                          // Colors.teal,
                         ],
                       )),
                       child: Column(
@@ -48,7 +48,7 @@ class MyAirtel extends StatelessWidget {
                                     Icons.person,
                                     size: ScreenUtil().setHeight(40),
                                   ),
-                                  maxRadius: ScreenUtil().setHeight(35.0),
+                                  maxRadius: ScreenUtil().setHeight(30.0),
                                 ),
                               ),
                               Expanded(
@@ -62,9 +62,11 @@ class MyAirtel extends StatelessWidget {
                                       Text("djumah risasi célestin",
                                           style: TextStyle(
                                             color: Colors.white,
+                                            fontFamily: "DayRow"
                                           )),
-                                      Text("+243974818977",
+                                      Text("974818977",
                                           style: TextStyle(
+                                            fontFamily: "DayRow",
                                             color: Colors.white,
                                           )),
                                     ],
@@ -89,21 +91,308 @@ class MyAirtel extends StatelessWidget {
                             )),
                         Expanded(
                           flex: 3,
+                          child: Row(
+                            children: [
+                              Expanded(
+                                flex: 3,
+                                child: ListTile(
+                                  title: Text(
+                                    'Compte',
+                                    style: TextStyle(
+                                        fontFamily: "DayRow",
+                                        fontWeight: FontWeight.w700),
+                                  ),
+                                  subtitle: Text(
+                                    "Afficher l'historique des transactions",
+                                    style: TextStyle(
+                                        fontSize: ScreenUtil().setHeight(10.0)),
+                                    overflow: TextOverflow.ellipsis,
+                                    maxLines: 2,
+                                  ),
+                                  onTap: () {
+                                    Navigator.pop(context);
+                                  },
+                                ),
+                              ),
+                              Expanded(
+                                flex: 1,
+                                child: Icon(
+                                  Icons.keyboard_arrow_down,
+                                  color: Colors.grey,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                    Divider(thickness: 0.5, color: Colors.grey),
+                    Row(
+                      children: [
+                        Expanded(
+                            flex: 1,
+                            child: Icon(
+                              Icons.notifications_none,
+                              size: ScreenUtil().setHeight(40),
+                              color: Colors.blue,
+                            )),
+                        Expanded(
+                          flex: 3,
                           child: ListTile(
-                            title: Text('Compte', style: TextStyle(),),
+                            title: Text(
+                              'Boîte de notifications',
+                              style: TextStyle(
+                                  fontFamily: "DayRow",
+                                  fontWeight: FontWeight.w700),
+                            ),
                             subtitle: Text(
-                              "Afficher l'historique des transactions",
+                              "Voir toutes les notifications",
+                              style: TextStyle(
+                                  fontSize: ScreenUtil().setHeight(10.0)),
                               overflow: TextOverflow.ellipsis,
-                              maxLines: 1,
+                              maxLines: 2,
                             ),
                             onTap: () {
-                              // Update the state of the app
-                              // ...
-                              // Then close the drawer
                               Navigator.pop(context);
                             },
                           ),
                         ),
+                      ],
+                    ),
+                    Divider(thickness: 0.5, color: Colors.grey),
+                    Row(
+                      children: [
+                        Expanded(
+                            flex: 1,
+                            child: Icon(
+                              Icons.shop,
+                              size: ScreenUtil().setHeight(40),
+                              color: Colors.blue,
+                            )),
+                        Expanded(
+                          flex: 3,
+                          child: ListTile(
+                            title: Text(
+                              'Boutiques Airtel',
+                              style: TextStyle(
+                                  fontFamily: "DayRow",
+                                  fontWeight: FontWeight.w700),
+                            ),
+                            subtitle: Text(
+                              "Liste des boutiques Airtel Money",
+                              style: TextStyle(
+                                  fontSize: ScreenUtil().setHeight(10.0)),
+                              overflow: TextOverflow.ellipsis,
+                              maxLines: 2,
+                            ),
+                            onTap: () {
+                              Navigator.pop(context);
+                            },
+                          ),
+                        ),
+                      ],
+                    ),
+                    Divider(thickness: 0.5, color: Colors.grey),
+                    Row(
+                      children: [
+                        Expanded(
+                            flex: 1,
+                            child: Icon(
+                              Icons.phone_in_talk_outlined,
+                              size: ScreenUtil().setHeight(40),
+                              color: Colors.blue,
+                            )),
+                        Expanded(
+                          flex: 3,
+                          child: ListTile(
+                            title: Text(
+                              'Aide et Assistance',
+                              style: TextStyle(
+                                  fontFamily: "DayRow",
+                                  fontWeight: FontWeight.w700),
+                            ),
+                            subtitle: Text(
+                              "Nous sommes là pour vous aider",
+                              style: TextStyle(
+                                  fontSize: ScreenUtil().setHeight(10.0)),
+                              overflow: TextOverflow.ellipsis,
+                              maxLines: 2,
+                            ),
+                            onTap: () {
+                              Navigator.pop(context);
+                            },
+                          ),
+                        ),
+                      ],
+                    ),
+                    Divider(thickness: 0.5, color: Colors.grey),
+                    Row(
+                      children: [
+                        Expanded(
+                            flex: 1,
+                            child: Icon(
+                              Icons.shop,
+                              size: ScreenUtil().setHeight(40),
+                              color: Colors.blue,
+                            )),
+                        Expanded(
+                          flex: 3,
+                          child: ListTile(
+                            title: Text(
+                              'Carte à grater',
+                              style: TextStyle(
+                                  fontFamily: "DayRow",
+                                  fontWeight: FontWeight.w700),
+                            ),
+                            subtitle: Text(
+                              "Recharge by scratch",
+                              style: TextStyle(
+                                  fontSize: ScreenUtil().setHeight(10.0)),
+                              overflow: TextOverflow.ellipsis,
+                              maxLines: 2,
+                            ),
+                            onTap: () {
+                              Navigator.pop(context);
+                            },
+                          ),
+                        ),
+                      ],
+                    ),
+                    Divider(thickness: 0.5, color: Colors.grey),
+                    Row(
+                      children: [
+                        Expanded(
+                            flex: 1,
+                            child: Icon(
+                              Icons.settings,
+                              size: ScreenUtil().setHeight(40),
+                              color: Colors.blue,
+                            )),
+                        Expanded(
+                          flex: 3,
+                          child: Row(
+                            children: [
+                              Expanded(
+                                flex: 3,
+                                child: ListTile(
+                                  title: Text(
+                                    'Réglages',
+                                    style: TextStyle(
+                                        fontFamily: "DayRow",
+                                        fontWeight: FontWeight.w700),
+                                  ),
+                                  subtitle: Text(
+                                    "Paramètres de l'application, déconnexion",
+                                    style: TextStyle(
+                                        fontSize: ScreenUtil().setHeight(10.0)),
+                                    overflow: TextOverflow.ellipsis,
+                                    maxLines: 2,
+                                  ),
+                                  onTap: () {
+                                    Navigator.pop(context);
+                                  },
+                                ),
+                              ),
+                              Expanded(
+                                flex: 1,
+                                child: Icon(
+                                  Icons.keyboard_arrow_down,
+                                  color: Colors.grey,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                    Divider(thickness: 0.5, color: Colors.grey),
+                    Row(
+                      children: [
+                        Expanded(
+                            flex: 1,
+                            child: Icon(
+                              Icons.info_outline,
+                              size: ScreenUtil().setHeight(40),
+                              color: Colors.blue,
+                            )),
+                        Expanded(
+                          flex: 3,
+                          child: ListTile(
+                            title: Text(
+                              'A propos de nous',
+                              style: TextStyle(
+                                  fontFamily: "DayRow",
+                                  fontWeight: FontWeight.w700),
+                            ),
+                            subtitle: Text(
+                              "A propos de nous",
+                              style: TextStyle(
+                                  fontSize: ScreenUtil().setHeight(10.0)),
+                              overflow: TextOverflow.ellipsis,
+                              maxLines: 2,
+                            ),
+                            onTap: () {
+                              Navigator.pop(context);
+                            },
+                          ),
+                        ),
+                      ],
+                    ),
+                    Divider(thickness: 0.5, color: Colors.grey),
+                    Row(
+                      children: [
+                        Expanded(
+                            flex: 1,
+                            child: Icon(
+                              Icons.share_rounded,
+                              size: ScreenUtil().setHeight(40),
+                              color: Colors.blue,
+                            )),
+                        Expanded(
+                            flex: 3,
+                            child: ListTile(
+                              title: Text(
+                                'Parraine et Gargne',
+                                style: TextStyle(
+                                    fontFamily: "DayRow",
+                                    fontWeight: FontWeight.w700),
+                              ),
+                            )),
+                      ],
+                    ),
+                    Divider(thickness: 0.5, color: Colors.grey),
+                    Row(
+                      children: [
+                        Expanded(
+                            flex: 1,
+                            child: Icon(
+                              Icons.star_half_rounded,
+                              size: ScreenUtil().setHeight(40),
+                              color: Colors.blue,
+                            )),
+                        Expanded(
+                            flex: 3,
+                            child: ListTile(
+                              title: Text(
+                                'Evaluez nous',
+                                style: TextStyle(
+                                    fontFamily: "DayRow",
+                                    fontWeight: FontWeight.w700),
+                              ),
+                            )),
+                      ],
+                    ),
+                    Divider(thickness: 0.5, color: Colors.grey),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        SizedBox(
+                          height: ScreenUtil().setHeight(30.0),
+                        ),
+                        Text(
+                          "Version 1.3.8",
+                          style: TextStyle(color: Colors.grey),
+                        )
                       ],
                     )
                   ],

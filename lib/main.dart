@@ -45,7 +45,7 @@ class MyAirtel extends StatelessWidget {
           ),
         ),
         appBar: AppBar(
-          title: Text('Airtel'),
+          title: Text('airtel', style: TextStyle(fontFamily: "Aclonica")),
           actions: [Icon(Icons.notifications)],
         ),
         body: Center(

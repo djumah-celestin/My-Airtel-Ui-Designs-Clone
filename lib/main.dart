@@ -264,7 +264,7 @@ class MyAirtel extends StatelessWidget {
                             Expanded(
                                 flex: 1,
                                 child: Icon(
-                                  Icons.shop,
+                                  Icons.card_membership,
                                   size: ScreenUtil().setHeight(40),
                                   color: Colors.blue,
                                 )),

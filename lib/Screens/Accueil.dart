@@ -281,26 +281,216 @@ class _AccueilState extends State<Accueil> {
                 left: ScreenUtil().setHeight(7.0),
                 right: ScreenUtil().setHeight(7.0),
               ),
-              child: Card(child: Container(
-                padding: EdgeInsets.only(
-                left: ScreenUtil().setHeight(7.0),
-                top: ScreenUtil().setHeight(7.0),
-                right: ScreenUtil().setHeight(7.0),
+              child: Card(
+                child: Container(
+                  padding: EdgeInsets.only(
+                    left: ScreenUtil().setHeight(7.0),
+                    top: ScreenUtil().setHeight(7.0),
+                    right: ScreenUtil().setHeight(7.0),
+                  ),
+                  child: Column(
+                    children: [
+                      Row(
+                        children: [
+                          Text("Action rapides",
+                              style: TextStyle(
+                                  fontFamily: "DayRow",
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: ScreenUtil().setHeight(15.0),
+                                  color: Colors.black)),
+                        ],
+                      ),
+                      Divider(thickness: 0.5, color: Colors.grey),
+                      Container(
+                        padding: EdgeInsets.only(top: ScreenUtil().setHeight(10.0), left: ScreenUtil().setHeight(10.0), right: ScreenUtil().setHeight(10.0)),
+                        height: MediaQuery.of(context).size.height / 2.5,
+                        child: Column(
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Column(
+                                  children: [
+                                    Card(
+                                        elevation: 10.0,
+                                        shape: RoundedRectangleBorder(
+                                            side: BorderSide(
+                                              color: Colors.white,
+                                            ),
+                                            borderRadius: BorderRadius.circular(
+                                                ScreenUtil().setHeight(50.0))),
+                                        child: CircleAvatar(
+                                          radius: ScreenUtil().setHeight(27.5),
+                                          backgroundColor: Colors.white,
+                                          child: Icon(
+                                            Icons.phone_android_rounded,
+                                            size: ScreenUtil().setHeight(30.0),
+                                            color: Colors.black,
+                                          ),
+                                        )),
+                                    Text("Recharger",
+                                        style: TextStyle(
+                                            fontFamily: "DayRow",
+                                            fontWeight: FontWeight.normal,
+                                            fontSize:
+                                                ScreenUtil().setHeight(10.0),
+                                            color: Colors.black)),
+                                  ],
+                                ),
+                                Column(
+                                  children: [
+                                    Card(
+                                        elevation: 10.0,
+                                        shape: RoundedRectangleBorder(
+                                            side: BorderSide(
+                                              color: Colors.white,
+                                            ),
+                                            borderRadius: BorderRadius.circular(
+                                                ScreenUtil().setHeight(50.0))),
+                                        child: CircleAvatar(
+                                          radius: ScreenUtil().setHeight(27.5),
+                                          backgroundColor: Colors.white,
+                                          child: Icon(
+                                            Icons.turned_in_not_outlined,
+                                            size: ScreenUtil().setHeight(30.0),
+                                            color: Colors.black,
+                                          ),
+                                        )),
+                                    Text("Paiement de factures",
+                                        style: TextStyle(
+                                            fontFamily: "DayRow",
+                                            fontWeight: FontWeight.normal,
+                                            fontSize:
+                                                ScreenUtil().setHeight(10.0),
+                                            color: Colors.black)),
+                                  ],
+                                ),
+                                Column(
+                                  children: [
+                                    Card(
+                                        elevation: 10.0,
+                                        shape: RoundedRectangleBorder(
+                                            side: BorderSide(
+                                              color: Colors.white,
+                                            ),
+                                            borderRadius: BorderRadius.circular(
+                                                ScreenUtil().setHeight(50.0))),
+                                        child: CircleAvatar(
+                                          radius: ScreenUtil().setHeight(27.5),
+                                          backgroundColor: Colors.white,
+                                          child: Icon(
+                                            Icons.date_range_outlined,
+                                            size: ScreenUtil().setHeight(30.0),
+                                            color: Colors.black,
+                                          ),
+                                        )),
+                                    Text("Acheter des forfaits",
+                                        style: TextStyle(
+                                            fontFamily: "DayRow",
+                                            fontWeight: FontWeight.normal,
+                                            fontSize:
+                                                ScreenUtil().setHeight(10.0),
+                                            color: Colors.black)),
+                                  ],
+                                )
+                              ],
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Column(
+                                  children: [
+                                    Card(
+                                        elevation: 10.0,
+                                        shape: RoundedRectangleBorder(
+                                            side: BorderSide(
+                                              color: Colors.white,
+                                            ),
+                                            borderRadius: BorderRadius.circular(
+                                                ScreenUtil().setHeight(50.0))),
+                                        child: CircleAvatar(
+                                          radius: ScreenUtil().setHeight(27.5),
+                                          backgroundColor: Colors.white,
+                                          child: Icon(
+                                            Icons.phone_android_rounded,
+                                            size: ScreenUtil().setHeight(30.0),
+                                            color: Colors.black,
+                                          ),
+                                        )),
+                                    Text("Recharger",
+                                        style: TextStyle(
+                                            fontFamily: "DayRow",
+                                            fontWeight: FontWeight.normal,
+                                            fontSize:
+                                                ScreenUtil().setHeight(10.0),
+                                            color: Colors.black)),
+                                  ],
+                                ),
+                                Column(
+                                  children: [
+                                    Card(
+                                        elevation: 10.0,
+                                        shape: RoundedRectangleBorder(
+                                            side: BorderSide(
+                                              color: Colors.white,
+                                            ),
+                                            borderRadius: BorderRadius.circular(
+                                                ScreenUtil().setHeight(50.0))),
+                                        child: CircleAvatar(
+                                          radius: ScreenUtil().setHeight(27.5),
+                                          backgroundColor: Colors.white,
+                                          child: Icon(
+                                            Icons.turned_in_not_outlined,
+                                            size: ScreenUtil().setHeight(30.0),
+                                            color: Colors.black,
+                                          ),
+                                        )),
+                                    Text("Produits et Services",
+                                        style: TextStyle(
+                                            fontFamily: "DayRow",
+                                            fontWeight: FontWeight.normal,
+                                            fontSize:
+                                                ScreenUtil().setHeight(10.0),
+                                            color: Colors.black)),
+                                  ],
+                                ),
+                                Column(
+                                  children: [
+                                    Card(
+                                        elevation: 10.0,
+                                        shape: RoundedRectangleBorder(
+                                            side: BorderSide(
+                                              color: Colors.white,
+                                            ),
+                                            borderRadius: BorderRadius.circular(
+                                                ScreenUtil().setHeight(50.0))),
+                                        child: CircleAvatar(
+                                          radius: ScreenUtil().setHeight(27.5),
+                                          backgroundColor: Colors.white,
+                                          child: Icon(
+                                            Icons.card_membership_outlined,
+                                            size: ScreenUtil().setHeight(30.0),
+                                            color: Colors.black,
+                                          ),
+                                        )),
+                                    Text("Envoyer de l'argent",
+                                        style: TextStyle(
+                                            fontFamily: "DayRow",
+                                            fontWeight: FontWeight.normal,
+                                            fontSize:
+                                                ScreenUtil().setHeight(10.0),
+                                            color: Colors.black)),
+                                  ],
+                                )
+                              ],
+                            )
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
+                ),
               ),
-              child: Column(
-                children: [
-                  Row(children: [
-                    Text("Action rapides",
-                                      style: TextStyle(
-                                          fontFamily: "DayRow",
-                                          fontWeight: FontWeight.bold,
-                                          fontSize:
-                                              ScreenUtil().setHeight(15.0),
-                                          color: Colors.black)),
-                  ],)
-                ],
-              ),
-              ),),
             )
           ],
         ),

@@ -272,6 +272,35 @@ class _AccueilState extends State<Accueil> {
                   ),
                 ),
               ),
+            ),
+            SizedBox(
+              height: ScreenUtil().setHeight(20.0),
+            ),
+            Padding(
+              padding: EdgeInsets.only(
+                left: ScreenUtil().setHeight(7.0),
+                right: ScreenUtil().setHeight(7.0),
+              ),
+              child: Card(child: Container(
+                padding: EdgeInsets.only(
+                left: ScreenUtil().setHeight(7.0),
+                top: ScreenUtil().setHeight(7.0),
+                right: ScreenUtil().setHeight(7.0),
+              ),
+              child: Column(
+                children: [
+                  Row(children: [
+                    Text("Action rapides",
+                                      style: TextStyle(
+                                          fontFamily: "DayRow",
+                                          fontWeight: FontWeight.bold,
+                                          fontSize:
+                                              ScreenUtil().setHeight(15.0),
+                                          color: Colors.black)),
+                  ],)
+                ],
+              ),
+              ),),
             )
           ],
         ),

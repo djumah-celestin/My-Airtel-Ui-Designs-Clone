@@ -45,7 +45,6 @@ class _AirtelMoneyState extends State<AirtelMoney> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        // height: MediaQuery.of(context).size.height,
         child: Column(
           children: [
             Expanded(

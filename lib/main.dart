@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:myairtel/Screens/Accueil.dart';
+import 'Screens/AirtelMoney.dart';
 
 void main() => runApp(MyAirtel());
 
@@ -452,7 +453,7 @@ class MyAirtel extends StatelessWidget {
                     child: Accueil(),
                   ),
                   Center(
-                    child: Text("Airtel Money"),
+                    child: AirtelMoney(),
                   ),
                 ],
               )),
